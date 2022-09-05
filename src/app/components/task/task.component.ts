@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from '../../services/task.service'
-import { Task } from '../../Task'
+import { TaskService } from '../../services/task.service';
+import { Task } from '../../Task';
 
 @Component({
   selector: 'app-task',
@@ -15,6 +15,14 @@ export class TaskComponent implements OnInit {
 
   ngOnInit(): void {
     this.taskService.getTasks().subscribe((tasks) => this.tasks = tasks);
+  }
+
+  addTask(task: Task): void {
+    this.taskService
+      .addTask(task)
+      .subscribe((task) => {
+        this.tasks.push(task);
+      });
   }
 
   deleteTask(task: Task): void {
