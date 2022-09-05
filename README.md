@@ -1,5 +1,8 @@
 # HelloWorld
 
+## Running the project
+To run the project, you must run `ng serve` to run the app and `npm run server` to run the JSON db.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
 
 ## Development server
